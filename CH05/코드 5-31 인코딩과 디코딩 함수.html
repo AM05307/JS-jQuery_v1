@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// 인코딩할 URL 만들기
+		var URI = 'http://hanbit.co.kr?test=한글입니다.';
+
+		// 출력할 문자열 만들기
+		var output = '';
+		output += '★escape()\n'
+		output += escape(URI) + '\n\n';
+		output += '★encodeURI()\n'
+		output += encodeURI(URI) + '\n\n';
+		output += '★encodeURIComponent()\n'
+		output += encodeURIComponent(URI) + '\n\n';
+
+		// 출력
+		alert(output);
+	</script>
+</body>
