@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//함수 생성
+		function returnFunction() {
+			return function () {
+				alert('Hello Function');
+			};
+		}
+
+		//함수 호출
+		returnFunction()();
+	</script>
+</body>
