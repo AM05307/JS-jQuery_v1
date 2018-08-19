@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//함수 선언
+		function test(a, b, c) {
+			//매개 변수 초기화
+			b = b||52; // 좌변이 참이르모 우변 무시
+			c = c||273; // 좌변이 거짓이므로 우변이 참인지 거짓인지 검사 (<불 표현식>) || (<불 표현식이 거짓일 때 실행할 문장>)
+			//출력
+			alert(a + ':' + b + ':' + c);
+		}
+
+		// 함수 호출
+		test(1,2);
+	</script>
+</body>
+</html>
