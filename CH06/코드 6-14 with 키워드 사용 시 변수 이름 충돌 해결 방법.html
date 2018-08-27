@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// 변수 선언
+		var student = {
+			이름: '연하진',
+			국어: 92, 수학: 98,
+			영어: 96, 과학:98,
+			output: '이미 있음' 
+		};
+
+		//출력
+		var output = '';
+		with (student) {
+			window.output += '이름: ' + 이름 + '\n';
+			window.output += '국어: ' + 국어 + '\n';
+			window.output += '수학: ' + 수학 + '\n';
+			window.output += '영어: ' + 영어 + '\n';
+			window.output += '과학: ' + 과학 + '\n';
+			window.output += '총점: ' + (국어 + 수학 + 영어 + 과학);
+		}
+
+		alert(output);
+
+		//이렇게 객체의 속성 이름과 외부의 변수 이름이 같으면 코드 6-4처럼 with 키워드 내부에서 window 객체의 output 변수를 사용한다고 지정해주어야 한다. 
+	</script>
+</body>
+</html>
