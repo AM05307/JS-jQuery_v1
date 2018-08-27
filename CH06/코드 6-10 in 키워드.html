@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//변수 선언
+		var output = '';
+		var student = {
+			이름 : '김종현',
+			국어 : 92, 수학: 98,
+			영어 : 96, 과학: 98
+		};
+
+		//in 키워드를 사용합니다.
+		output += "'이름' in student:" + ('이름' in student) + '\n';
+		output += "'성별' in student:" + ('성별' in student);
+
+		//출력
+		alert(output);
+	</script>
+</body>
+</html>
