@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//변수 선언
+		var student = {};
+
+		//객체에 속성 추가 
+		student.name = 'jh.Kim';
+		student.hobby = 'piano';
+		student.hobby2 = 'programming';
+		student.dream = 'programmer';
+
+		//toString() 메서드 만들기
+		student.toString = function (){
+			var output = '';
+			for (var key in this){
+				//toString() 메서드는 출력하지 않는다
+				if(key != 'toString'){
+					output += key + '\t' + this[key] + '\n';
+				}
+			}
+			return output;
+		};
+
+		//출력
+		alert(student.toString());
+
+		//속성 제거
+		delete (student.hobby);
+
+		//toString() 메서드를 사용하지 않아도 toString() 메서드를 사용
+		alert(student);
+	</script>	
+</body>
+</html>
