@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//학생 정보 배열 생성
+		var students = [];
+
+		//배열에 요소 추가
+		students.push({ 이름: '김종현', 국어:87, 수학: 98, 영어: 99, 과학: 98 });
+		students.push({ 이름: '정해인', 국어:87, 수학: 98, 영어: 99, 과학: 98 });
+		students.push({ 이름: '톰하디', 국어:87, 수학: 98, 영어: 99, 과학: 98 });
+		students.push({ 이름: '박보영', 국어:87, 수학: 98, 영어: 99, 과학: 98 });
+
+		//모든 students 배열 안 객체에 메서드를 추가
+		for (var i in students) {
+			//충전을 구하는 메서드 추가
+			students[i].getSum = function() {
+				return this.국어 + this.수학 + this.영어 + this.과학;
+			};
+
+			//평균을 구하는 메서드 추가
+			students[i].getAverage = function() {
+				return this.getSum() /4;
+			};
+		}
+
+		//출력
+		var output = '이름\t총점\t평균\n';
+		for (var i in students) {
+			with (students[i]) {
+				output += 이름 + '\t' + getSum() + '\t' + getAverage() + '\n';
+			}
+		}
+
+		alert(output);
+	</script>
+</body>
+</html>
